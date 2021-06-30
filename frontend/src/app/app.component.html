@@ -1,0 +1,66 @@
+<table>
+  <th>Track Order Details</th>
+    <tr>
+      <td>
+        <label for="orderID"> Order ID </label>
+        <input type="text" [(ngModel)]="TrackingInfo.OrderId" name="orderID" required placeholder="Enter Order Id here">
+      </td>
+      <td>
+        <label for="ShipmentDate">Shipment Date</label>
+        <input type="date" [(ngModel)]="TrackingInfo.ShipmentDate" name="ShipmentDate" placeholder="Select Date of Shipment">
+      </td>
+      <td>
+        <label for="DeliveryDate">Delivery Date</label>
+        <input type="date"[(ngModel)]="TrackingInfo.DeliveryDate" name="DeliveryDate"placeholder="Select Date of Delivery">
+      </td>
+      <td>
+        <input type="button" id="Savebutton"value="Save" (click)="SaveRecord()" >
+      </td>
+    </tr>
+  <tr>
+    <td>
+      <b>
+      Sno
+      </b>
+    </td>
+    <td>
+      <b>
+        Order ID
+      </b>
+    </td>
+    <td>
+      <b>Shipment Date</b>
+    </td>
+    <td>
+      <b>
+        Delivery Date
+      </b>
+    </td>
+    <td>
+      <b>
+        Action
+      </b>
+  
+      </td>
+  </tr>
+    <tr *ngFor="let item of TrackingList">
+    <td>
+     {{item.SNo}}
+    </td>
+    <td>
+      {{item.OrderId}}
+    </td>
+    <td>
+      {{item.ShipmentDate}}
+    </td>
+    <td>
+      {{item.DeliveryDate}}
+    </td>
+    <td>
+      <span (click)="Edit(item)" class="material-icons">
+        edit
+        </span>
+      <span (click)="DeleteRecord(item)" class="material-icons">delete</span>
+    </td>
+  </tr>
+</table>
