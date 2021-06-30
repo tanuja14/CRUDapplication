@@ -1,8 +1,8 @@
-# CRUDapplication
+# CRUD Application
 
-*Backend used - C#
-*Frontend used - Angular
-*Database used - SQL
+*Backend used - C#*<br>
+*Frontend used - Angular*<br>
+*Database used - SQL*
 
 
 # Screenshots
